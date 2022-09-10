@@ -1,0 +1,22 @@
+{
+  "name": "ck4bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolpippiou/ck4bot.git"
+  },
+  "author": "",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lolpippiou/ck4bot/issues"
+  },
+  "homepage": "https://github.com/lolpippiou/ck4bot#readme",
+  "dependencies": {
+    "discord.js": "^14.3.0"
+  }
+}
