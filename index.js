@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const fs = require("fs");
+const path = require("path");
 const client = new Discord.Client({ intents: [Discord.GatewayIntentBits.Guilds] });
 
 const commands = [
@@ -43,6 +45,12 @@ const rest = new Discord.REST({ version: "10" }).setToken(process.env['token']);
 client.on("ready", () => {
     console.log(`logged in as ${client.user.tag}`);
 });
+
+client.on("messageCreate", message => {
+    if (message.content.toLowerCase().includes("hommegneu")) {
+        message.reply("Eh oui! Le 7 decembre 2020, le HOMMEGNEU!! Ma dir com les heune calisse de ménar manheux dmard de habarnak quidi le HOMMEGNEU pÉDoPhile ayayaya YYYAAAHOUUUU egne manhez don toute gnla mad gnegne gnalis mon heun nn calissage a ugnièr ma gnagne de tabarnak de manheu dmad de heun...", new MessageAttachment(fs.readFileSync(path.join(__dirname, "ehoui.mov"))))
+    }
+})
 
 client.on("interactionCreate", async interaction => {
     if (interaction.isChatInputCommand()) {
